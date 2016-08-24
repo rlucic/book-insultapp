@@ -11,6 +11,7 @@ String theInsult = "";
 try {
 	String databaseURL = "jdbc:postgresql://";
 databaseURL += System.getenv("POSTGRESQL_SERVICE_HOST");
+databaseURL += ":" + System.getenv("POSTGRESQL_SERVICE_PORT");
 databaseURL += "/" + System.getenv("POSTGRESQL_DATABASE");
 String username = System.getenv("POSTGRESQL_USER");
 String password = System.getenv("PGPASSWORD");
